@@ -1,0 +1,38 @@
+## Server Properties
+server.port= 9001
+spring.jmx.default-domain=todo-api
+	
+## Spring Profiles
+spring.profiles.active=test
+
+## hibernate
+#hibernate.dialect=org.hibernate.dialect.MySQLDialect
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect  
+hibernate.show_sql=true
+hibernate.format_sql=true
+hibernate.hbm2ddl.auto=update
+hibernate.proc.param_null_passing=true
+hibernate.schema_update.unique_constraint_strategy=SKIP
+hibernate.connection.useUnicode=true
+
+# Hikari will use the above plus the following to setup connection pooling
+spring.datasource.minimumIdle=5
+spring.datasource.maximumPoolSize=20
+spring.datasource.idleTimeout=30000
+spring.datasource.poolName=DiagnosticHikariCP
+spring.datasource.maxLifetime=2000000
+spring.datasource.connectionTimeout=30000
+
+# Enable logging for HikariCP to verify that it is used
+logging.level.com.zaxxer.hikari.HikariConfig=DEBUG
+
+# ERROR LOG SETUP
+logging.level.org.springframework.web= ERROR
+
+
+logging.file = ../logs/todo.log
+logging.pattern.file= %d{dd-MMM-yyyy HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n
+logging.pattern.console= %d{dd-MMM-yyyy HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n
+
+
+

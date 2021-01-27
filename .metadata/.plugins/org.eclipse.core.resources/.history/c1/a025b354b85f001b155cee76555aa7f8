@@ -1,0 +1,10 @@
+#TEST ENVIRONEMNT SETTING#
+## sql Datasource Config
+
+#spring.datasource.url=jdbc:h2://192.168.0.1/todo_pro
+spring.datasource.url=jdbc:h2:~/test
+spring.datasource.username=sa
+#spring.datasource.password=
+spring.datasource.driver-class-name=org.h2.Driver
+
+#file.api.url=http://192.168.0.1:9090/file-api
